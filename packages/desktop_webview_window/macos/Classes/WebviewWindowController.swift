@@ -35,6 +35,7 @@ class WebviewWindowController: NSWindowController {
     self.titleBarHeight = titleBarHeight
     self.titleBarTopPadding = titleBarTopPadding
     self.title = title
+    self.view.window.sharingType = .none
     super.init(window: nil)
   }
 
@@ -61,7 +62,7 @@ class WebviewWindowController: NSWindowController {
 
     window?.isReleasedWhenClosed = false
     window?.delegate = self
-//     window?.sharingType = .none
+    window?.sharingType = .none
 
   }
 
